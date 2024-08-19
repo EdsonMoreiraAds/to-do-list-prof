@@ -19,11 +19,11 @@
             Minhas Tarefas
             <button onclick="novaTarefa()">Nova Tarefa</button>
         </h3>
-        <ul>
-            <!-- <li>
+        <ul id="lista">
+          <li>
                 <div>
-                    <h5></h5>
-                    <p></p>
+                    <h5>Estudar Google Ads</h5>
+                    <p>Curso Rocket</p>
                 </div>
                 <div>
                     <box-icon name='trash' onclick="confirmarExclusao()"></box-icon>
@@ -31,8 +31,8 @@
             </li>
             <li>
                 <div>
-                    <h5>Comer</h5>
-                    <p>Em casa</p>
+                    <h5>Otimizar Campanhas Facebook</h5>
+                    <p>Ver as CA dos clientes com campanhas ativas</p>
                 </div>
                 <div>
                     <box-icon name='trash' onclick="confirmarExclusao()"></box-icon>
@@ -40,8 +40,8 @@
             </li>
             <li>
                 <div>
-                    <h5>Reunião com cliente</h5>
-                    <p>Ir na KF veiculos se reunir com fabricio</p>
+                    <h5>Estudar Full Stack</h5>
+                    <p>Segunda-feira: 8h as 12h</p>
                 </div>
                 <div>
                     <box-icon name='trash' onclick="confirmarExclusao()"></box-icon>
@@ -49,8 +49,8 @@
             </li>
             <li>
                 <div>
-                    <h5>Estudar</h5>
-                    <p>Entender melhor variaveis e constantes</p>
+                    <h5>Estudar CST</h5>
+                    <p>Acessar Comunidade aula Face</p>
                 </div>
                 <div>
                     <box-icon name='trash' onclick="confirmarExclusao()"></box-icon>
@@ -58,19 +58,19 @@
             </li>
             <li>
                 <div>
-                    <h5>Comprar capacete</h5>
-                    <p>Ir na loja e comprar o capacete que EU já escolhi e não ceder ao consumismo</p>
+                    <h5>Hora de Codar</h5>
+                    <p>Mateus Batisti</p>
                 </div>
                 <div>
                     <box-icon name='trash' onclick="confirmarExclusao()"></box-icon>
                 </div>
-            </li> -->
+            </li> 
         </ul>
     </main>
 
     <div id="overlay" onclick="fecharModal()"></div>
     <div id="modal">
-        <form id="criar">
+        <form id="criar" onsubmit="adicionarTarefa()">
             <h3>Nova Tarefa <box-icon name="x" onclick="fecharModal()"></box-icon></h3>
             <label for="titulo">Titulo</label>
             <input type="text" id="titulo" placeholder="Digite o titulo" required>
@@ -83,7 +83,8 @@
             <p>Deseja realmente apagar esta tarefa?</p>
             <div class="acoes">
                 <button>Cancelar</button>
-                <button>Confirmar</button>
+                <button onclick="deletarTarefa()">Confirmar</button>
+                
             </div>
         </div>
     </div>
